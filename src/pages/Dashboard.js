@@ -72,7 +72,6 @@ const Dashboard = () => {
             field: 'id',
             headerName: 'ՔԱՅԼԵՐ',
             renderCell: (params) => {
-                console.log(params, 'params')
                 return (<div>
                         <div style={{ display: "flex", flexDirection: 'row', alignItems: 'center' }}>
                             <Link to={`/edit-user/${params.row.id}`}
