@@ -14,7 +14,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
     deleteUser,
     selectUsers,
-    filterByName,
 } from '../actions/users/userSlice';
 import { Link } from "react-router-dom";
 import { CreateUserModal } from "../components/CreateUserModal";
@@ -126,7 +125,6 @@ const Dashboard = () => {
                                 <TableRow>
                                     <TableCell align="left">
                                         <TextField
-                                            onChange={(event) => dispatch(filterByName({value: event.target.value}))}
                                             name="firstName"
                                             placeholder="Search By Name"
                                             margin="normal"

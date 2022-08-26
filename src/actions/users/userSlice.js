@@ -24,13 +24,10 @@ export const userSlice = createSlice({
     editUser: (state, action) => {
       state.users =  state.users.map(((item) => item.id === action.payload.id ? {...action.payload} : item));
     },
-    findUserById: (state, action) => {
-      return state.users.filter((user) => user.id === action.payload.id)
-    },
   },
 });
 
-export const { addUser, deleteUser, editUser, filterByName } = userSlice.actions;
+export const { addUser, deleteUser, editUser } = userSlice.actions;
 
 export const selectUsers = (store) => store.state.users;
 
